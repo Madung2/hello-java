@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>hellotemplate</title>
 </head>
 <body>
-$END$
+
+<p th:text="'안녕하세요!' + ${name}">안녕하세요. empty</p>
 </body>
 </html>
