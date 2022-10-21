@@ -1,5 +1,7 @@
 package hello.hellospring.domain;
 
+
+//도메인에는 멤버 클래스를 만든다.
 public class Member {
     private Long id; //시스템 아이디
     private String name;
