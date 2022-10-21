@@ -21,16 +21,21 @@ public class HelloController {
         return "hello-template";
     }
     @GetMapping("hello-string")
-    @ResponseBody
+    @ResponseBody //http에서 바디부에 이 데이터를 직접 넣어주겠다
     public String helloString(@RequestParam("name") String name){
         return "hello " + name;
     }
+
     @GetMapping("hello-api")
     @ResponseBody
-    public Hello
-    static class Hello {
+    public Hello helloApi(@RequestParam("name") String name) {
+        Hello hello = new Hello();
+        hello.setName(name);
+        return hello;
+    }
+    static class Hello { //Hello라는 객체 타입을 만든다
         private String name;
-
+        
         public String getName(){
             return name;
         }
@@ -39,3 +44,5 @@ public class HelloController {
         }
     }
 }
+
+
