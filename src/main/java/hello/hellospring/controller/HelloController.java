@@ -35,7 +35,7 @@ public class HelloController {
     }
     static class Hello { //Hello라는 객체 타입을 만든다
         private String name;
-        
+
         public String getName(){
             return name;
         }
